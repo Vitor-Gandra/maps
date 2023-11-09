@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             sh '''
-                echo This Was Trigered
+                echo This Was Trigered by github
             '''
         }
     }
