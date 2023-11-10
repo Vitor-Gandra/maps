@@ -40,10 +40,11 @@ pipeline {
             when {
                 tag "WEB-*"
             }
+            input {
+                message "Proceed with deploy?"
+                ok "Yes"
+            }
             steps {
-                timeout(time: 10, unit: “MINUTES”) {
-                    input message: ‘Approve Deploy?’, ok: ‘Yes’
-                }
                 sh '''
                     echo Deploy Tag $TAG_NAME
                     /var/pipeline/deploy.sh $TAG_NAME
