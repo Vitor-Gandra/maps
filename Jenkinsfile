@@ -40,10 +40,6 @@ pipeline {
             when {
                 tag "WEB-*"
             }
-            input {
-                message "Proceed with deploy?"
-                ok "Yes"
-            }
             steps {
                 sh '''
                     echo Deploy Tag $TAG_NAME
