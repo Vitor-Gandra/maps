@@ -8,7 +8,8 @@ pipeline {
             }
             steps {
                 sh '''
-                    echo This is a push to Master
+                    echo This is a pr
+                    echo $PWD
                 '''
             }
         }
@@ -42,7 +43,7 @@ pipeline {
             steps {
                 sh '''
                     echo Starting deploy
-                    ./deploy.sh
+                    ./pipeline/deploy.sh
                 '''
             }
         }
