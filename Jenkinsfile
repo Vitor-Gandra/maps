@@ -43,7 +43,7 @@ pipeline {
             steps {
                 sh '''
                     echo Starting deploy
-                    ./pipeline/deploy.sh
+                    /var/pipeline/deploy.sh
                 '''
             }
         }
