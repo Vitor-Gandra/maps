@@ -41,7 +41,8 @@ pipeline {
             }
             steps {
                 sh '''
-                    echo This is a tag
+                    echo Starting deploy
+                    ./deploy.sh
                 '''
             }
         }
