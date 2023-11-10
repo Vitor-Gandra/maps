@@ -42,8 +42,8 @@ pipeline {
             }
             steps {
                 sh '''
-                    echo Starting deploy
-                    /var/pipeline/deploy.sh
+                    echo Deploy Tag $TAG_NAME
+                    /var/pipeline/deploy.sh $TAG_NAME
                 '''
             }
         }
