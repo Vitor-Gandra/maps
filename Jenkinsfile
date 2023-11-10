@@ -40,6 +40,9 @@ pipeline {
             when {
                 tag "WEB-*"
             }
+            timeout(time: 10, unit: “MINUTES”) {
+                input message: ‘Approve Deploy?’, ok: ‘Yes’
+            }
             steps {
                 sh '''
                     echo Deploy Tag $TAG_NAME
